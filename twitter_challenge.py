@@ -5,7 +5,7 @@ import sys
 def totalUsers():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = input("Enter the file write path: ")
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/totalUsers'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         twit=myFile.readlines()
@@ -31,7 +31,7 @@ totalUsers()
 def maxFollowers():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = input("Enter the file write path: ")
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/maxFollowers'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         twit=myFile.readlines()
@@ -55,7 +55,7 @@ maxFollowers()
 def retweetCount():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = input("Enter the file write path: ")
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/retweetCount'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         twit=myFile.readlines()
@@ -88,7 +88,7 @@ retweetCount()
 def usersPerHour():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = input("Enter the file write path: ")
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/usersPerHour'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         data=myFile.readlines()
