@@ -5,7 +5,9 @@ import sys
 def totalUsers():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/totalUsers'
+    x = input("Enter a number: ")
+    n = int(x)
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/1a'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         twit=myFile.readlines()
@@ -21,8 +23,8 @@ def totalUsers():
  
     outputFile = open(OUTPUT_FILE_PATH, 'w', encoding = 'utf-8')
 	   
-    outputFile.write("The top 10 users who have tweeted the most for the entire timeline: \n")
-    for i in range (0,10):
+    outputFile.write("The top"+ x +"users who have tweeted the most for the entire timeline: \n")
+    for i in range (0,n):
         outputFile.write("User Name " + g[i][0] + "\n\n")
         
     outputFile.close
@@ -31,7 +33,9 @@ totalUsers()
 def maxFollowers():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/maxFollowers'
+    n = input("Enter a number: ")
+    value = int(n)
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/1b'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         twit=myFile.readlines()
@@ -45,9 +49,9 @@ def maxFollowers():
     g = sorted(g.items(), key = operator.itemgetter(1), reverse = True)
     outputFile = open(OUTPUT_FILE_PATH, 'w', encoding = 'utf-8')
 	   
-    outputFile.write("The top 10 users who have the maximum followers: " + "\n\n")
+    outputFile.write("The top"+ n + "users who have the maximum followers: " + "\n\n")
 
-    for i in range (0, 10):
+    for i in range (0, value):
         outputFile.write("Username: " + g[i][0] + "\n\n")
     outputFile.close
 maxFollowers()
@@ -55,7 +59,9 @@ maxFollowers()
 def retweetCount():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/retweetCount'
+    value = input("Enter a number: ")
+    n = int(value)
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/1c'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         twit=myFile.readlines()
@@ -76,9 +82,9 @@ def retweetCount():
     outputFile = open(OUTPUT_FILE_PATH, 'w', encoding = 'utf-8')
 	   
     g = sorted(g.items(), key = operator.itemgetter(1), reverse = True)
-    outputFile.write("The top 10 tweets that have the max retweet count: " + "\n\n")
+    outputFile.write("The top"+  value + "tweets that have the max retweet count: " + "\n\n")
 
-    for x in range (0, 10):
+    for x in range (0, n):
         outputFile.write("\n Tweet: " +
                       g[x][0].split("::::;::::")[0]  + "\n\n")
     outputFile.close
@@ -88,7 +94,9 @@ retweetCount()
 def usersPerHour():
     INPUTFILE = input("Enter the path of the input file located: ")
     INPUT_FILE_PATH = INPUTFILE+ '.txt'
-    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/usersPerHour'
+    value = input("Enter a number: ")
+    n = int(value)
+    OUTFILE = 'D:/UNCC/Fall 18/SSDI/Assignments/Twitter_Assignment_API/1d'
     OUTPUT_FILE_PATH = OUTFILE + '.txt'
     with open (INPUT_FILE_PATH, encoding = "latin-1") as myFile:
         data=myFile.readlines()
@@ -117,7 +125,7 @@ def usersPerHour():
     totalEntriesToPrint = 10*len(g2)
     outputFile = open(OUTPUT_FILE_PATH, 'w', encoding = 'utf-8')
    
-    outputFile.write("The top 10 users who have tweeted the most for every hour: " + "\n\n")
+    outputFile.write("The top"+ value +"users who have tweeted the most for every hour: " + "\n\n")
     for x in range (0,len(g2)):
    
         mSearch = 10
